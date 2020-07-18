@@ -1,0 +1,12 @@
+@import 'tailwindcss/base';
+
+@import 'tailwindcss/components';
+
+@import 'tailwindcss/utilities';
+
+body, html {
+    @apply w-full;
+    @apply h-full;
+    background-color: hsl(202, 5%, 33%);
+    @apply text-base;
+}

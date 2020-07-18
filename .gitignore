@@ -1,5 +1,9 @@
 .vscode/
 
+# Chrome extension
+.log/
+yarn-error.log
+
 # Elixir
 .elixir-ls/
 

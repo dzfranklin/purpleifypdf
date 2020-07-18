@@ -1,0 +1,27 @@
+// See config/transformManifestTemplate
+{
+  "name": "Purpleify PDF",
+  "version": "%VERSION%",
+  "manifest_version": 2,
+  "description": "Change the background color of PDFs",
+  "homepage_url": "https://danielzfranklin.org/purple",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "background": {
+    "page": "%BACKGROUND_PAGE%",
+    "persistent": true
+  },
+  "permissions": [
+    "<all_urls>",
+    "webRequest",
+    "webRequestBlocking",
+    "storage",
+    "history"
+  ],
+  "web_accessible_resources": [
+    "index.html"
+  ]
+}
