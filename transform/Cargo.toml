@@ -1,0 +1,45 @@
+[package]
+name = "purpleifypdf"
+version = "0.2.0"
+authors = ["Daniel Franklin <daniel@danielzfranklin.org>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[profile.release]
+debug = true
+
+[dependencies]
+anyhow = "1.0.27"
+poppler = { version = "0.3.1", features = ["generate-bindings"] }
+cairo-rs = { features = ["pdf"], version = "0.8.1" }
+printpdf = { features = ["less-optimization"], version = "0.3.2" }
+image = "0.23.2"
+thiserror = "1.0.14"
+glib = "0.9.3"
+serde = { version = "1.0.106", features = ["derive"] }
+futures = "0.3.4"
+structopt = "0.3.12"
+bytesize = "1.0.0"
+serde_json = "1.0.51"
+lopdf = "0.24.0"
+hex = "0.4.2"
+indicatif = "0.14.0"
+env_logger = "0.7.1"
+slog = "2.5.2"
+sloggers = "0.3.6"
+slog-scope = "4.3.0"
+uuid = { version = "0.8.1", features = ["v4"] }
+rocket = "0.4.4"
+rocket_contrib = "0.4.4"
+
+[patch.crates-io]
+printpdf = { git = "https://github.com/danielzfranklin/printpdf" }
+poppler = { git = "https://github.com/danielzfranklin/poppler-rs" }
+
+[dev-dependencies]
+criterion = "0.3.1"
+rocket = { version = "0.4.4", features = ["tls"]}
+
+[[bench]]
+name = "integration"
+harness = false

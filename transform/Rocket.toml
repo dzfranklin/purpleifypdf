@@ -1,0 +1,3 @@
+[development.tls]
+certs = "test_assets/localhost.crt"
+key = "test_assets/localhost.key"
