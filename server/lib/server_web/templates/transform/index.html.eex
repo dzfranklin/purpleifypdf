@@ -22,5 +22,5 @@
         <%= color_input f, :background_color, value: "#CE09EE", required: true %>
     </div>
 
-    <%= submit "Download" %>
+    <%= submit "Change background" %>
 <% end %>

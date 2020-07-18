@@ -29,7 +29,8 @@ defmodule ServerWeb.TransformController do
           conn
           |> send_download({:file, out_file},
             filename: encode_filename(filename),
-            encode: false
+            encode: false,
+            disposition: :inline
           )
           |> put_flash(:info, "Downloading")
           |> redirect(to: Routes.transform_path(conn, :index))
