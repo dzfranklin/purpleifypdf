@@ -1,3 +1,7 @@
 .vscode/
 
+# Elixir
+.elixir-ls/
+
+# Rust
 target/

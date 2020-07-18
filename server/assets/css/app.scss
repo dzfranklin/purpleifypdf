@@ -1,0 +1,60 @@
+body {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px;
+  max-width: 500px;
+}
+
+form {
+  .input {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border: 1px solid hsl(0, 0%, 47.8%);
+    padding: 15px;
+  }
+
+  label {
+    padding-right: 20px;
+  }
+
+  submit {
+    font-size: 1.1em;
+    font-weight: 500;
+    padding: 3px 10px;
+  }
+}
+
+/* Alerts and form errors */
+.alert {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.alert-info {
+  color: #31708f;
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+}
+
+.alert-warning {
+  color: #8a6d3b;
+  background-color: #fcf8e3;
+  border-color: #faebcc;
+}
+
+.alert-danger {
+  color: #a94442;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+}
+
+.alert p {
+  margin-bottom: 0;
+}
+
+.alert:empty {
+  display: none;
+}

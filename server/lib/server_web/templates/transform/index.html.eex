@@ -1,0 +1,26 @@
+<h1>PurpleifyPDF</h1>
+<p>Change the background color of a PDF (even if the PDF is a scan)</p>
+
+<%= form_for :transform, Routes.transform_path(ServerWeb.Endpoint, :upload), [multipart: true], fn f -> %>
+    <div class="input">
+    <%= label f, :input, "PDF file:" %>
+    <%= file_input f, :input, accept: "application/pdf", required: true %>
+    </div>
+
+    <div class="input">
+        <%= label f, :quality, "Quality:" %>
+        <%= select f, :quality, [
+                {"Extreme", :extreme},
+                {"High", :high},
+                {"Normal", :normal},
+                {"Low", :low}
+            ], selected: :high, required: true %>
+    </div>
+
+    <div class="input">
+        <%= label f, :background_color, "New background color:" %>
+        <%= color_input f, :background_color, value: "#CE09EE", required: true %>
+    </div>
+
+    <%= submit "Download" %>
+<% end %>
